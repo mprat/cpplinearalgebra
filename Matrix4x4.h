@@ -16,6 +16,10 @@ public:
     Matrix4x4 operator-(const Matrix4x4 & m) const;
     Matrix4x4 operator*(const Matrix4x4 & m) const;
     
+    
+    //cast to pointer to a (float *) for glGetFloatv etc
+	operator float* () const {return (float*) this;}
+	operator const float* () const {return (const float*) this;}
 private:
     float values[16];
 };
