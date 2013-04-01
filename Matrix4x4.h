@@ -1,3 +1,6 @@
+#include <memory>
+#include <iostream>
+
 class Matrix4x4{
 public:
     Matrix4x4();
@@ -6,7 +9,7 @@ public:
               float e20, float e21, float e22, float e23,
               float e30, float e31, float e32, float e33);
     Matrix4x4(float entries[16]);
-    ~Matrix4x4(); //empty
+    //~Matrix4x4(); //empty
     
     void Identity(void);
     void Zero(void);
@@ -20,6 +23,9 @@ public:
     //cast to pointer to a (float *) for glGetFloatv etc
 	operator float* () const {return (float*) this;}
 	operator const float* () const {return (const float*) this;}
+    
+    //other methods
+    void print();
 private:
     float values[16];
 };

@@ -1,5 +1,4 @@
 #include "Matrix4x4.h"
-#include <memory.h>
 
 Matrix4x4::Matrix4x4(){
     Identity();
@@ -75,4 +74,11 @@ Matrix4x4 Matrix4x4::operator*(const Matrix4x4 &m) const{
                      values[1]*m.values[12]+values[5]*m.values[13]+values[9]*m.values[14]+values[13]*m.values[15],
                      values[2]*m.values[12]+values[6]*m.values[13]+values[10]*m.values[14]+values[14]*m.values[15],
                      values[3]*m.values[12]+values[7]*m.values[13]+values[11]*m.values[14]+values[15]*m.values[15]);
+}
+
+void Matrix4x4::print(){
+    std::cout<<values[0]<<" "<<values[1]<<" "<<values[2]<<" "<<values[3]<<std::endl;
+    std::cout<<values[4]<<" "<<values[5]<<" "<<values[6]<<" "<<values[7]<<std::endl;
+    std::cout<<values[8]<<" "<<values[9]<<" "<<values[10]<<" "<<values[11]<<std::endl;
+    std::cout<<values[12]<<" "<<values[13]<<" "<<values[14]<<" "<<values[15]<<std::endl<<std::endl;
 }
