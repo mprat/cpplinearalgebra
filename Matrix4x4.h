@@ -10,6 +10,12 @@ public:
     
     void Identity(void);
     void Zero(void);
+    
+    //operators
+    Matrix4x4 operator+(const Matrix4x4 & m) const;
+    Matrix4x4 operator-(const Matrix4x4 & m) const;
+    Matrix4x4 operator*(const Matrix4x4 & m) const;
+    
 private:
     float values[16];
 };
