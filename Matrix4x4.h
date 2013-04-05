@@ -1,5 +1,6 @@
 #include <memory>
 #include <iostream>
+#include <cstring>
 
 class Matrix4x4{
 public:
@@ -8,7 +9,8 @@ public:
               float e10, float e11, float e12, float e13,
               float e20, float e21, float e22, float e23,
               float e30, float e31, float e32, float e33);
-    Matrix4x4(float entries[16]);
+    // Matrix4x4(float entries[16]);
+    Matrix4x4(const float * newentries);
     //~Matrix4x4(); //empty
     
     void Identity(void);
@@ -26,6 +28,6 @@ public:
     
     //other methods
     void print();
-private:
+
     float values[16];
 };
