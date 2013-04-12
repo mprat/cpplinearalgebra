@@ -1,0 +1,10 @@
+{
+	"build_systems":
+	[
+	{
+		"cmd": ["make"],
+		"name": "test", 
+		"working_dir": "${project_path:${folder}}"
+	}
+	]
+}
