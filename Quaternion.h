@@ -12,6 +12,8 @@ public:
     Quaternion(double newX, double newY, double newZ, double newW): x(newX), y(newY), z(newZ), w(newW){};
     Quaternion(const Matrix4x4 &m);
     
+    
+    
     double x;
     double y;
     double z;
