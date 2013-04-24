@@ -1,4 +1,8 @@
-#include "cpplinearalgebra.h"
+#include "Quaternion.h"
+#include "Vector3D.h"
+
+#ifndef POSE_CPP_H
+#define POSE_CPP_H
 
 class Pose {
 public:
@@ -13,3 +17,5 @@ public:
     Quaternion rotation;
     Vector3D translation;
 };
+
+#endif

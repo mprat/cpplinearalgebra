@@ -1,3 +1,6 @@
+#ifndef VECTOR3D_CPP_H
+#define VECTOR3D_CPP_H
+
 class Vector3D{
 public:
     Vector3D(void) : x(0.0f), y(0.0f), z(0.0f){}
@@ -10,3 +13,5 @@ public:
     float z;
 
 };
+
+#endif

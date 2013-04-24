@@ -1,3 +1,8 @@
+#include "Vector3D.h"
+
+#ifndef MATRIX4X4_CPP_H
+#define MATRIX4X4_CPP_H
+
 #include <memory>
 #include <iostream>
 #include <cstring>
@@ -21,6 +26,8 @@ public:
     Matrix4x4 operator-(const Matrix4x4 & m) const;
     Matrix4x4 operator*(const Matrix4x4 & m) const;
     
+    Vector3D GetTranslatedVector3D(const Vector3D & rhs) const;
+    void SetTranslationPart(const Vector3D & translation);
     
     //cast to pointer to a (float *) for glGetFloatv etc
 	operator float* () const {return (float*) this;}
@@ -31,3 +38,5 @@ public:
 
     float values[16];
 };
+
+#endif

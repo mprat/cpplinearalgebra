@@ -1,4 +1,10 @@
-#include "cpplinearalgebra.h"
+#include "Matrix4x4.h"
+
+#ifndef QUATERNION_CPP_H
+#define QUATERNION_CPP_H
+
+#include <cmath>
+
 
 class Quaternion{
 public:
@@ -11,3 +17,5 @@ public:
     double z;
     double w;
 };
+
+#endif

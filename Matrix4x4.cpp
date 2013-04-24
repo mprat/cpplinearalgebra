@@ -86,3 +86,13 @@ void Matrix4x4::print(){
     std::cout<<values[8]<<" "<<values[9]<<" "<<values[10]<<" "<<values[11]<<std::endl;
     std::cout<<values[12]<<" "<<values[13]<<" "<<values[14]<<" "<<values[15]<<std::endl<<std::endl;
 }
+
+Vector3D Matrix4x4::GetTranslatedVector3D(const Vector3D &rhs) const{
+    return Vector3D(rhs.x+values[12], rhs.y+values[13], rhs.z+values[14]);
+}
+
+void Matrix4x4::SetTranslationPart(const Vector3D &translation){
+    values[12] = translation.x;
+    values[13] = translation.y;
+    values[14] = translation.z;
+}
