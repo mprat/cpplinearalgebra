@@ -12,6 +12,10 @@ Pose Pose::getInverse() const{
     return Pose(rInv, rInv*(-translation));
 }
 
+Vector3D Pose::GetObjectLocation() const{
+	return getInverse()*Vector3D(0.0, 0.0, 0.0);
+}
+
 void Pose::print(){
     std::cout<<"Rotation: ";
     rotation.print();

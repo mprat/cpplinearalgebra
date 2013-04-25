@@ -27,6 +27,15 @@ public:
     Pose getInverse() const;
     Vector3D GetObjectLocation() const;
     
+    //operators
+    //Recall that we are right-multiplying the vector, so v' = T(Rv)
+	Vector3D operator*(const Vector3D rhs) const
+	{
+		Vector3D Rv = rotation*rhs;
+		return Rv+translation;
+	}
+
+    
     //other methods
     void print();
     
