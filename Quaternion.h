@@ -4,7 +4,8 @@
 #define QUATERNION_CPP_H
 
 #include <cmath>
-
+#include <iostream>
+#include <cstring>
 
 class Quaternion{
 public:
@@ -43,6 +44,9 @@ public:
 //    Quaternion getInverse() const {return ((1.0/getNormSquared())*getConjugate());}
     Quaternion getInverse() const {return (getConjugate() / getNormSquared());}
     
+    //other methods
+    void print();
+        
     double x;
     double y;
     double z;

@@ -11,3 +11,10 @@ Pose Pose::getInverse() const{
     Quaternion rInv = rotation.getInverse();
     return Pose(rInv, rInv*(-translation));
 }
+
+void Pose::print(){
+    std::cout<<"Rotation: ";
+    rotation.print();
+    std::cout<<"Translation: ";
+    translation.print();
+}

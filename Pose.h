@@ -4,6 +4,9 @@
 #ifndef POSE_CPP_H
 #define POSE_CPP_H
 
+#include <iostream>
+#include <cstring>
+
 class Pose {
 public:
     Pose(void){
@@ -23,6 +26,9 @@ public:
     Pose(const Matrix4x4 &mat);
     Pose getInverse() const;
     Vector3D GetObjectLocation() const;
+    
+    //other methods
+    void print();
     
     Quaternion rotation;
     Vector3D translation;

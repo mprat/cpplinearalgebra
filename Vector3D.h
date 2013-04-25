@@ -1,6 +1,9 @@
 #ifndef VECTOR3D_CPP_H
 #define VECTOR3D_CPP_H
 
+#include <iostream>
+#include <cstring>
+
 class Vector3D{
 public:
     Vector3D(void) : x(0.0f), y(0.0f), z(0.0f){}
@@ -10,6 +13,9 @@ public:
     
     //operators as they are needed
     Vector3D operator-(void) const {return Vector3D(-x, -y, -z);}
+    
+    //other methods
+    void print();
     
     float x;
     float y;
