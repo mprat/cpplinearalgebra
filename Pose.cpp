@@ -7,6 +7,7 @@ Pose::Pose(const Matrix4x4 &mat){
     rotation = Quaternion(inputMat);
 }
 
-Pose Pose::getInverse(){
-    
+Pose Pose::getInverse() const{
+    Quaternion rInv = rotation.getInverse();
+    return Pose(rInv, rInv*(-translation));
 }

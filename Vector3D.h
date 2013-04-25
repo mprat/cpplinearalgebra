@@ -8,6 +8,9 @@ public:
     Vector3D(const float * rhs) : x(*rhs), y(*(rhs+1)), z(*(rhs+2)){}
     Vector3D(const Vector3D & rhs) : x(rhs.x), y(rhs.y), z(rhs.z) {}
     
+    //operators as they are needed
+    Vector3D operator-(void) const {return Vector3D(-x, -y, -z);}
+    
     float x;
     float y;
     float z;
