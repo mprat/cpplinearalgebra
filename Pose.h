@@ -25,7 +25,7 @@ public:
 	}
     Pose(const Matrix4x4 &mat);
     Pose getInverse() const;
-    Vector3D GetObjectLocation() const;
+    Vector3D getObjectLocation() const;
     
     //operators
     //Recall that we are right-multiplying the vector, so v' = T(Rv)
