@@ -24,6 +24,7 @@ public:
 		translation = trans;
 	}
     Pose(const Matrix4x4 &mat);
+    Pose(const float * newentries);
     Pose getInverse() const;
     Vector3D getObjectLocation() const;
     
@@ -37,6 +38,7 @@ public:
 
     
     //other methods
+    Vector3D translationToDesiredPose(const Pose &desiredPose);
     void print();
     
     Quaternion rotation;

@@ -15,6 +15,9 @@ public:
     Vector3D operator+(const Vector3D & rhs) const{
         return Vector3D(x + rhs.x, y + rhs.y, z + rhs.z);
     }
+    Vector3D operator-(const Vector3D & rhs) const{
+        return Vector3D(x - rhs.x, y - rhs.y, z - rhs.z);
+    }
     Vector3D operator-(void) const {return Vector3D(-x, -y, -z);}
     
     //other methods
