@@ -23,6 +23,7 @@ public:
     
     //other methods
     float length();
+    float xy_length();
     void print();
     
     float x;

@@ -7,3 +7,7 @@ void Vector3D::print(){
 float Vector3D::length(){
     return (float)sqrt((x*x) + (y*y) + (z*z));
 }
+
+float Vector3D::xy_length(){
+    return (float)sqrt((x*x) + (y*y));
+}
