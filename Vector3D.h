@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <cstring>
+#include <cmath>
 
 class Vector3D{
 public:
@@ -21,6 +22,7 @@ public:
     Vector3D operator-(void) const {return Vector3D(-x, -y, -z);}
     
     //other methods
+    float length();
     void print();
     
     float x;
